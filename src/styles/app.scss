@@ -11,6 +11,8 @@ $bp-small-1: 35em;       //560px
 $bp-small-2: 30em;       //480px
 $bp-small-3: 25em;       //400px
 
+@import './header';
+
 * {
     margin: 0;
     padding: 0;
@@ -18,3 +20,16 @@ $bp-small-3: 25em;       //400px
     scroll-behavior: smooth;
     font-family: 'Rubik', sans-serif;
 }
+
+.app {
+    height: 100vh;
+    background-color: #282c34;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+

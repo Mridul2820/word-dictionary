@@ -1,10 +1,13 @@
+import { Container } from '@material-ui/core'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Header from './components/Header'
 import "./styles/app.scss"
 
 const api = "https://api.dictionaryapi.dev/api/v2/entries/en"
 
 const App = () => {
+    const [word, setWord] = useState("")
     const [meanings, setMeanings] = useState([])
     const dictionaryAPI = async() => {
         try {
@@ -25,7 +28,9 @@ const App = () => {
 
     return (
         <div className="app">
-            <h1>Word APP</h1>
+            <Container maxWidth="md" className="container">
+                <Header />
+            </Container>
         </div>
     )
 }
