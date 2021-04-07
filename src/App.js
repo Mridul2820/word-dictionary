@@ -9,6 +9,8 @@ const api = "https://api.dictionaryapi.dev/api/v2/entries/en"
 const App = () => {
     const [word, setWord] = useState("")
     const [meanings, setMeanings] = useState([])
+    const [catagory, setCatagory] = useState("en")
+
     const dictionaryAPI = async() => {
         try {
             const data = await axios.get(`${api}/plane`)
@@ -29,7 +31,12 @@ const App = () => {
     return (
         <div className="app">
             <Container maxWidth="md" className="container">
-                <Header />
+                <Header 
+                    catagory={catagory} 
+                    setCatagory={setCatagory} 
+                    word={word} 
+                    setWord={setWord}
+                />
             </Container>
         </div>
     )
