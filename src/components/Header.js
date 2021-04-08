@@ -1,14 +1,14 @@
 import { createMuiTheme, MenuItem, TextField, ThemeProvider } from '@material-ui/core'
 import categories from '../data'
 
-const Header = ({ catagory, setCatagory, word, setWord}) => {
+const Header = ({ catagory, setCatagory, word, setWord, lightMode}) => {
 
     const darkTheme = createMuiTheme({
         palette: {
             primary: {
-                main: "#fff"
+                main: lightMode ? "#000" : "#fff"
             },
-            type: 'dark',
+            type: lightMode ? "light" : "dark",
         },
     });
 

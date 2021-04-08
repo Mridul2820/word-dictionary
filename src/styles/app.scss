@@ -24,13 +24,18 @@ $bp-small-3: 25em;       //400px
 
 .app {
     height: 100vh;
-    background-color: #282c34;
-    color: #fff;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     height: 100vh;
 }
 
+.switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+}
